@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+    />
+</head>
+<body class="bg-gray-100">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div id="sidebar" 
+         class="bg-indigo-950 text-white fixed inset-y-0 left-0 w-64 transform -translate-x-full transition-transform duration-300 md:translate-x-0 md:w-1/4 lg:w-64 lg:static">
+      <div class="p-6">
+        <h2 class="text-lg font-semibold mb-4 text-center">My Linkedin</h2>
+        <img src="./images/linkedin.png" alt="Logo" class="h-28 mx-auto mb-4 border-4 border-white border-shadow">
+        <ul>
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)] pt-4">
+            <i class="fa-solid fa-house mr-4"></i> 
+            Home
+            <i class="fa-solid fa-chevron-down ml-auto hidden group-hover:inline transition-transform transform "></i>
+          </a>
+
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)] pt-4">
+            <i class="fa-solid fa-user-group mr-4"></i>
+            My Network
+            <i class="fa-solid fa-chevron-down ml-auto hidden group-hover:inline transition-transform transform "></i>
+          </a>
+
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)] pt-4">
+            <i class="fa-solid fa-briefcase mr-4"></i> 
+             Job
+            <i class="fa-solid fa-chevron-down ml-auto hidden group-hover:inline transition-transform transform "></i>
+          </a>
+
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)] pt-4">
+            <i class="fa-regular fa-calendar mr-4"></i>
+            Calender
+            <i class="fa-solid fa-chevron-down ml-auto hidden group-hover:inline transition-transform transform "></i>
+          </a>
+
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)] pt-4">
+            <i class="fa-solid fa-comment-dots mr-4"></i>
+            Messenging
+            <i class="fa-solid fa-chevron-down ml-auto hidden group-hover:inline transition-transform transform "></i>
+          </a>
+
+          <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)] pt-4">
+            <i class="fa-solid fa-blog mr-4"></i>
+            Blog
+            <i class="fa-solid fa-chevron-down ml-auto hidden group-hover:inline transition-transform transform "></i>
+          </a>
+        </ul>
+        <ul >
+          <!-- Admin Menu with Hoverable Submenu -->
+          <li class="mb-4 group relative hover:bg-[rgba(255,255,255,0.16)] rounded-md">
+            <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md menu-item hover:text-[#FF9750] group-hover:bg-[rgba(255,255,255,0.16)]">
+              <i class="fa-solid fa-user-shield mr-3"></i> 
+              My Business
+              <i class="fa-solid fa-chevron-down ml-auto  group-hover:inline transition-transform transform "></i>
+            </a>
+            <ul class="ml-6 hidden group-hover:block">
+              <li>
+                <a href="#" class="flex items-center px-4 py-2 rounded-md menu-item hover:text-[#FF9750]">
+                  <i class="fas fa-users mr-4"></i>
+                  Staff
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center px-4 py-2 rounded-md menu-item hover:text-[#FF9750]">
+                  <i class="fa-solid fa-file-invoice-dollar mr-4"></i>
+                  Payment
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center px-4 py-2 rounded-md menu-item hover:text-[#FF9750]">
+                  <i class="fa-solid fa-image mr-4"></i>
+                  Photos
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center px-4 py-2 rounded-md menu-item hover:text-[#FF9750]">
+                  <i class="fa-solid fa-chart-pie mr-4"></i>
+                  Business Insights
+                </a>
+              </li>
+
+              
+            </ul>
+          </li>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 flex flex-col">
+      <!-- Header -->
+      <header class="bg-indigo-900 text-white p-4 flex justify-between items-center ">
+        <h1 class="text-lg font-semibold">Responsive Sidebar</h1>
+        
+        <button id="toggleSidebar" 
+                class="p-2 rounded bg-indigo-800 focus:outline-none hover:bg-indigo-700">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </header>
+      <!-- Main Content -->
+      <main class="p-6">
+        
+        <h2 class="text-2xl font-semibold">Welcome to My personal Linkedin Homepage</h2>
+        <p class="mt-4 bg-indigo-800">
+          
+        </p>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const toggleSidebar = document.getElementById("toggleSidebar");
+    const sidebar = document.getElementById("sidebar");
+
+    toggleSidebar.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+    <style>
+        form {
+            margin: auto;
+            width: 500px;
+            padding: 50px;
+        }
+
+        input,
+        select,
+        textarea {
+
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Day 3</h1>
+    </center>
+    <center>
+        <h2>FORM</h2>
+    </center>
+    <form id="myform" autocomplete="on">
+        <fieldset>
+            <legend>Personal Info:</legend>
+            <label for="full_name">Full Name:</label>
+            <input id="full_name" type="text" placeholder="Full Name"><br>
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" name="birthdate" id="birthdate" value="2024-10-05"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password"><br>
+            <label for="mobile_no">Mobile No.:</label>
+            <input type="number" name="mobile_no" list="mobile_no" placeholder="Mobile number" min="1000000000" max="9999999999"><br>
+            <datalist id="mobile_no">
+                <option value="9933552277">
+                <option value="9933664488">
+                <option value="7744882299">
+                <option value="8833440022">
+                <option value="9988776655">
+            </datalist>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="Male" name="gender">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender">
+            <label for="Female">Female</label>
+            <input type="radio" id="LGBTQ" name="gender">
+            <label for="LGBTQ">LGBTQ+</label><br>
+            <label for="Year">Year:</label>
+            <select name="" id="Year">
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4" selected>4th</option>
+            </select><br>
+            <label for="selfdescription">Despription:</label> <br>
+            <textarea name="" id="selfdescription" rows="5" cols="60"
+                placeholder="Tell something about yourself....."></textarea><br>
+            <!-- <input type="button" name="" id="submit" value="submit"> -->
+            <!-- <input type="button" name="" id="reset" value="reset"> -->
+            <label for="resume">Upload Resume:</label>
+            <input type="file" name="resume" id="resume"><br>
+            <button type="submit" onclick="preventDefault()">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+</body>
+
+
+</html>
